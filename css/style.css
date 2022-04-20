@@ -1,0 +1,139 @@
+:root {
+    --softBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --cyanHover: hsla(178, 100%, 50%, 0.568);
+    --darkBlueLineaMain: hsl(216, 54%, 11%);
+    --darkBlueLineaTarjeta: hsl(216, 50%, 16%);
+    --darkBlueLinea: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    --FuentePrincipal: 'Outfit', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.8rem;
+    background-color: var(--darkBlueLineaMain);
+    color: var(--softBlue);
+}
+
+/* Globales */
+img {
+    width: 100%;
+}
+p {
+    font-family: var(--FuentePrincipal);
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.contenedor {
+    width: min(70%, 29rem);
+    background-color: var(--darkBlueLineaTarjeta);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 15px 20px rgba(13,25,43,1);
+}
+@media (min-width: 1200px) {
+    .contenedor {
+        width: min(70%, 27rem);
+    }
+}
+
+/* main */
+.contenedor-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+}
+
+/* Imagen */
+.imagen {
+    position: relative;
+}
+.imagen__equilibrium {
+    border-radius: 1rem;
+}
+.imagen__hover {
+    position: absolute;
+    background-color: var(--cyanHover);
+    border-radius: 1rem;
+    width: 100%;
+    height: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    transform: scale(0);
+    transition: transform .5s;
+}
+.imagen__icono {
+    width: 5rem;
+    margin: 0;
+}
+.imagen:hover .imagen__hover {
+    transform: scale(1);
+}
+
+/* Contendio */
+.contenido {
+    border-bottom: 1px solid var(--darkBlueLinea);
+}
+.contenido__titulo {
+    font-size: 1.8rem;
+    font-family: var(--FuentePrincipal);
+    color: var(--white);
+    font-weight: 600;
+}
+.creador__texto:hover,
+.contenido__titulo:hover {
+    color: var(--cyan);
+}
+.contenido__texto {
+    font-weight: 300;
+    margin: 0;
+}
+.contenido-informacion {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Iconos */
+.info-iconos {
+    display: flex;
+    gap: .6rem;
+    margin: auto 0;
+}
+.info-iconos__icono {
+    width: auto;
+    margin: auto 0;
+}
+.info-iconos__texto {
+    color: var(--cyan);
+}
+.info-iconos__texto--color {
+    margin: 0;
+    color: var(--cyan);
+    text-transform: uppercase;
+}
+
+/* Atribucion */
+.creador {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.creador__imagen {
+    width: 4rem;
+    border-radius: 50%;
+    margin: auto 0;
+    border: 1px solid var(--white);
+}
+.creador__texto {
+    color: var(--white);
+}
